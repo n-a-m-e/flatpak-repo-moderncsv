@@ -15,7 +15,8 @@ jobs:
   publish:
     uses: n-a-m-e/flatpak-build-template/.github/workflows/publish.yml@main
     with:
-      app-id: com.moderncsv.ModernCSV
+      app-id: |
+        com.moderncsv.ModernCSV
+        com.moderncsv.ModernCSV.Legacy
       source-git: https://github.com/n-a-m-e/flatpak-app-moderncsv.git
-      rebuild-trigger: |
-        git moderncsv https://github.com/n-a-m-e/flatpak-app-moderncsv.git main
+      rebuild-trigger: git moderncsv https://github.com/n-a-m-e/flatpak-app-moderncsv.git main
